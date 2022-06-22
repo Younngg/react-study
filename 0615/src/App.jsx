@@ -9,6 +9,7 @@ import { Manual, Rule, Policy, EtcInfo } from './pages/FooterMenu';
 import Event from './components/Event';
 import VideoTab from './components/videoList/VideoTab';
 import Form from './components/Form';
+import Detail from './components/Detail';
 
 function App() {
   const title = 'site';
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='/cardList' element={<CardList />} />
+
           <Route path='/notice' element={<Notice />} />
           <Route path='/manual' element={<Manual />} />
           <Route path='/policy' element={<Policy />} />
@@ -27,6 +29,7 @@ function App() {
           <Route path='/event' element={<Event />} />
           <Route path='/video' element={<VideoTab />} />
           <Route path='/form' element={<Form />} />
+          <Route path='/cardList/:card' element={<Detail />} />
         </Routes>
         <Footer title={title} />
       </BrowserRouter>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { MdFavorite } from 'react-icons/md';
 import { useState } from 'react';
+import '../style/container.css';
+import { Link } from 'react-router-dom';
 
 const Card = ({ card }) => {
   const favListColor = [{ color: '#ddd' }, { color: '#F20' }];
@@ -15,7 +17,7 @@ const Card = ({ card }) => {
     setCheckState(e.target.checked);
   };
   return (
-    <li>
+    <li className='card'>
       <div
         className='img_set'
         style={{ background: `url(${card.imgUrl}) no-repeat center / cover` }}
@@ -37,9 +39,7 @@ const Card = ({ card }) => {
           좋아요
           <MdFavorite style={favListColor[fav]} />
         </label>
-        <a className='link' href={card.dataLink}>
-          상세보기
-        </a>
+        <Link to={`/cardList/${card.id}`}>상세보기</Link>
       </div>
     </li>
   );

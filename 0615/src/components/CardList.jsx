@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import axios from 'axios';
-
+import '../style/container.css';
 const CardList = () => {
   const [cardData, setCardData] = useState([]);
+
   const dataUrl = 'http://localhost:3000/data/cardData.json';
   useEffect(() => {
     const fnc = async () => {
@@ -12,6 +13,7 @@ const CardList = () => {
     };
     fnc();
   }, []);
+
   /* useEffect(() => {
     axios('http://localhost:3000/data/cardData.json')
       .then((response) => response.data)
@@ -35,7 +37,11 @@ const CardList = () => {
       <h3>CardList</h3>
       <ul className='card_wrap'>
         {cardData.map((card) => {
-          return <Card key={card.id} card={card} />;
+          return (
+            <>
+              <Card key={card.id} card={card} />
+            </>
+          );
         })}
       </ul>
     </div>
