@@ -1,0 +1,82 @@
+.mainContainer {
+  --list-size: 1200px;
+  height: auto;
+  margin: 50px auto;
+}
+
+.mainContainer .slideBtn {
+  border-bottom: 1px solid #777;
+  width: var(--list-size);
+  margin: auto;
+}
+
+.mainContainer .slideBtn button {
+  padding: 0.5rem 1rem;
+  background-color: green;
+  margin: 0 1rem;
+  color: #fff;
+}
+
+.mainContainer .viewContents {
+  margin: auto;
+  width: var(--list-size);
+  overflow: hidden;
+  border: 1px solid #999;
+}
+/* 슬라이드 */
+.mainContainer .viewContents ul {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.mainContainer .viewContents li {
+  flex-shrink: 1;
+  width: var(--list-size);
+  height: 500px;
+  font-size: 4rem;
+  text-align: center;
+  padding: 50px;
+  display: none;
+}
+.mainContainer .viewContents li.on {
+  display: block;
+  color: antiquewhite;
+}
+.mainContainer .view_01 {
+  background-color: aquamarine;
+}
+
+.mainContainer .view_02 {
+  background-color: darkslategray;
+}
+.mainContainer .view_03 {
+  background-color: blue;
+}
+.mainContainer .view_04 {
+  background-color: darkorange;
+}
+
+/* 키프레임 애니메이션 */
+
+/* @keyframes */ /* 키프레임은 마지막에 ; 쓰지 않기 */
+@keyframes firstSlide {
+  0% {
+    margin-left: 100%;
+    transition: none;
+  }
+  100% {
+    margin-left: 0;
+    transition: margin 500ms ease;
+  }
+}
+@keyframes lastSlide {
+  0% {
+    margin-left: 0%;
+    transition: margin 500ms ease;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
