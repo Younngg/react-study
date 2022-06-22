@@ -1,0 +1,6 @@
+.fun-item {width: 230px;}
+
+.item-imgbox img {border-radius: 8px; width: 100%; border: 1px solid #efefef;}
+.item-infobox {padding-top: 14px; overflow: hidden; height: 70px;word-break: keep-all;}
+.item-infobox .info-title {display: block; font-size: 16px;line-height: 22px;padding-right: 10px;}
+.item-infobox .info-company {display: block;font-size: 13px; color: #888;padding-top: 10px;}

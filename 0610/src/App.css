@@ -1,0 +1,20 @@
+* {margin: 0; padding: 0;}
+ul,li,ol {list-style: none;}
+
+.logo {
+  width: 1100px;
+  margin: 30px auto 0;
+}
+
+.fun-box.on {
+  display: block;
+}
+.fun-box.off {
+  display: none;
+}
+.langbox.on {
+  display: block;
+}
+.langbox.off {
+  display: none;
+}

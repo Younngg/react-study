@@ -1,0 +1,23 @@
+.lang-box {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #333;
+  width: fit-content;
+}
+
+.lang-box li a{
+  display: block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #999;
+  font-weight: 900;
+  text-align: center;
+}
+
+.lang-box li:last-child a {
+  margin-bottom: 0;
+}
+
+.lang-box li a.active {
+  color: #000;
+}
