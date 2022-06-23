@@ -5,7 +5,7 @@ import '../style/container.css';
 const CardList = () => {
   const [cardData, setCardData] = useState([]);
 
-  const dataUrl = 'http://localhost:3000/data/cardData.json';
+  const dataUrl = 'http://localhost:3001/card';
   useEffect(() => {
     const fnc = async () => {
       const response = await axios.get(dataUrl);

@@ -3,13 +3,12 @@ import { useParams } from 'react-router-dom';
 
 const Detail = () => {
   const { card } = useParams();
-  const cardNum = Number(card);
   const [details, setDetails] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:3000/data/cardData.json`)
+    fetch(`http://localhost:3001/card?id=${card}`)
       .then((res) => res.json())
-      .then((data) => setDetails(data[cardNum - 1]));
-  }, [cardNum]);
+      .then((data) => setDetails(data[0]));
+  }, [card]);
   /* 
   const cardList = details.filter(
     (element) => Number(element.id) === Number(card)
